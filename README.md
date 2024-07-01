@@ -8,6 +8,6 @@ Navigate the Eulerian Circuit map and remember the path.
 - Phase 2  
 Based on the exploration in Phase 1, Linetracer must generate and follow a path that satisfies the single-stroke drawing criteria.  
 
-code:  
-report:  
-video:
+[code](https://github.com/5eoyeon/Linetracer/blob/main/main.c) 
+[report](https://github.com/5eoyeon/Linetracer/blob/main/report.md) 
+[video](https://youtu.be/fV10pGMxpK4?feature=shared)
