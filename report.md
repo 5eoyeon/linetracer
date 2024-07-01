@@ -1,7 +1,3 @@
-# Linetracer
-
-video: https://www.youtube.com/watch?v=fV10pGMxpK4
-
 # Algorithm
 
  Using properties of Eulerian circuit, this algorithm can be used for any Eulerian circuit, not only this project’s map. It is simple because Eulerian circuit is closed and every vertex has an even number of edges. By using these properties, if there is a path entering a vertex, there must be an exit path. So, in Eulerian circuit, as long as the algorithm follows certain rules, it will definitely return to the starting point with a Eulerian trail.
@@ -14,17 +10,21 @@ video: https://www.youtube.com/watch?v=fV10pGMxpK4
 
 Figure 1
 
-![Figure 2](image/Untitled%201.png)
+<div style="display: flex; justify-content: space-around; align-items: center;">
+    <div>
+        <img src="image/Untitled%201.png" alt="Figure 2" style="max-width: 30%; height: auto;">
+        <p>Figure 2</p>
+    </div>
+    <div>
+        <img src="image/Untitled%202.png" alt="Figure 3 - start line will be ignored" style="max-width: 30%; height: auto;">
+        <p>Figure 3 - start line will be ignored</p>
+    </div>
+    <div>
+        <img src="image/Untitled%203.png" alt="Figure 4" style="max-width: 30%; height: auto;">
+        <p>Figure 4</p>
+    </div>
+</div>
 
-Figure 2
-
-![Figure 3 - start line will be ignored](image/Untitled%202.png)
-
-Figure 3 - start line will be ignored
-
-![Figure 4](image/Untitled%203.png)
-
-Figure 4
 
  In phase 1, memorize the map to save the number of vertices and the number of edges.
 
