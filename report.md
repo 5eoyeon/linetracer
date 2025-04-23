@@ -34,6 +34,8 @@ Figure 5
  In phase 2, perform one-brush drawing using the number of vertices and the number of edges. First, move following line 0 at every vertex (shown in figure 3 and figure 4). When the robot moves along line 0, it goes around the border and returns to the starting point. Second, move following line 1 at every vertex. Each step moves the number of vertices times. The robot repeats movement (reaches at vertex) by increasing the line number when robot moves the number of vertices times, until the number of movements equals the number of edges.
 
  Assume that there are m vertices having n edges. If the robot moves following line number i in current step, it is the same as passing the (n-i)th edge of the node to be visited next. It is not problem when all the number of edges of the vertices is not same. Because if there is an incoming edge, there must be an outgoing edge. Therefore, since the one-stroke drawing route must exists (Euler circuit), as long as robot follows certain rules repeatedly, the robot will not go back the visited path. Figure 5 is an example. The visited edges of each vertex are marked in black.
+ 
+ This algorithm is also possible for graphs that are not closed shapes. For example, if two triangles are connected at the starting point, it can be said that one triangle is included in the other triangle, so it can be replaced with a closed shape. Also, in phase 1, for such graphs, the robot stores the information replaced with a closed shape, not the actual map. It means that the process of moving along the (n-i)th line from the point of view of the robot is a form that extends outside the outermost shape. Therefore, it can be performed normally.
 
 # Functions
 
@@ -74,6 +76,7 @@ Figure 6
 - **PHASE2** (line 549~614)
 
  Through `Find_Vertex`, the robot identifies vertices and increments `visit_v` and `visit_e`. When the number of visited vertices is divisible by `total_v`, the level increases. The `Rotate_To_Right_Specific_Edge` function uses the level to rotate to the level-th edge. `start_line` manages edges connected to the starting vertex to be ignored. When `visit_e` equals `total_e`, the robot enters end mode. In end mode, it stops by checking if all IR sensors from 0 to 7 detect obstacles when entering the endpoint straight, or uses `Rotate_To_Right_Specific_Edge` and stops when moving until sensors 3 and 4 are undetected (start line).
+ This 
 
 # Review
 
